@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D9D9;
+    padding: 10px;
+}
+
+.iniNavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.iniNavbar ul li {
+    display: inline;
+}
+
+.iniNavbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* .navbar-left ul li a:hover {
+    background-color: #555;
+} */
+
+.logoo .logo img {
+    height: 50px; /* Sesuaikan tinggi logo sesuai kebutuhan */
+    width: auto;
+}
+
+.deskripsi {
+    background-color: #B3B3B3;
+    padding: 50px 0;
+    text-align: center;
+    height: 310px;
+}
+
+.deskripsi h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.deskripsi p {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D9D9D9;
+}
+
+.scope {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.icon i {
+    margin-bottom: 10px;
+}
+
+.maps-superstore {
+    text-align: center;
+}
+
+.maps-superstore h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.maps-superstore .image img {
+    margin: 0 auto; 
+}
+
