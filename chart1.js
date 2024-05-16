@@ -19,3 +19,5 @@ var myChart = new Chart(ctx, {
         responsive: true
     }
 });
+
+// bukan data csv
