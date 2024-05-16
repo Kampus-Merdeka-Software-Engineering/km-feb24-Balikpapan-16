@@ -1,71 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Team</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+    <link rel="stylesheet" href="styles.css">
+    <title>projekann</title>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="iniNavbar">
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>Brand.</h2>
+            </div>
+            <div class="search">
+                <input type="text" name="search" placeholder="search here">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="img/user.png" alt="">
+            </div>
+        </div>
+        <div class="sidebar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Region</a></li>
-                <li><a href="#">About</a></li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div>home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>Students</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div>Teachers</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <div>Employees</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>Analytics</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <div>Earnings</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <div>Settings</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <div>Help</div>
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="logoo">
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">1</div>
+                        <div class="card-name">Students</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">42</div>
+                        <div class="card-name">Teachers</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">68</div>
+                        <div class="card-name">Employees</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">$4500</div>
+                        <div class="card-name">Earnings</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <div class="deskripsi">
-            <h1>Data SuperStore</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nisl in massa pellentesque posuere. 
-                Praesent sollicitudin erat in nibh elementum maximus. In molestie, ante non suscipit sollicitudin, felis dui suscipit ligula, pellentesque pharetra dui dui ac urna. 
-                Praesent tempor mi sed orci blandit pellentesque. Phasellus erat ligula, imperdiet non tincidunt a, aliquam sed lorem. Sed finibus eu velit vel ullamcorper. 
-                Proin gravida, justo in aliquam consequat, tellus odio condimentum diam, dignissim fermentum metus urna ut nunc. 
-                Etiam in sapien sed quam consectetur pretium et nec magna. Etiam eleifend blandit enim at placerat. Sed vel neque justo.
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam at posuere quam, ac volutpat ipsum.</p>
-    </div>
-
-    <div class="container">
-        <div class="scope">
-            <h1>Scope</h1>
-        </div>
-        <div class="icons">
-            <div class="icon">
-                <i class="fa-solid fa-square-xmark fa-2xl" style="color: #000000;"></i>
-                <h2>scope 1</h2>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Earnings (past 12 months)</h2>
+                    <div>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart doughnut-chart">
+                    <h2>Employees</h2>
+                    <div>
+                        <canvas id="doughnut"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="icon">
-                <i class="fa-solid fa-square-xmark fa-2xl" style="color: #000000;"></i>
-                <h2>scope 2</h2>
-            </div>
-            <div class="icon">
-                <i class="fa-solid fa-square-xmark fa-2xl" style="color: #000000;"></i>
-                <h2>scope 3</h2>
-            </div>
-            <div class="icon">
-                <i class="fa-solid fa-square-xmark fa-2xl" style="color: #000000;"></i>
-                <h2>scope 4</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="maps-superstore">
-        <h1>Maps Superstore</h1>
-        <div class="image">
-            <img src="maps_superstore.jpg" alt="Maps Superstore">
         </div>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chart2.js"></script>
 </body>
+
 </html>
