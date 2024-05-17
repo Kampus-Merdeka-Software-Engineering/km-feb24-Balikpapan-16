@@ -17,6 +17,7 @@
     grid-template-columns: 2fr 10fr 0.4fr 1fr;
     align-items: center;
     z-index: 1;
+  
 }
 
 img {
@@ -30,6 +31,7 @@ img {
 
 .logo h2 {
     color: #299B63;
+       
 }
 
 .search {
@@ -228,6 +230,7 @@ img {
     }
     .logo h2 {
         font-size: 20px;
+        
     }
     .search {
         width: 80%;
