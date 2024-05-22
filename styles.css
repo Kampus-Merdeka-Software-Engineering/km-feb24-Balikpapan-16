@@ -1,303 +1,269 @@
+/* CSS halaman index */
 * {
+    margin: 0;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
 }
 
-/* login */
-.login-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/foto.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-box {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 40px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.login-box h1 {
+/* Navbar */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    color: white;
-    font-size: 2rem;
+    padding: 0;
 }
 
-.login-link {
+nav {
+    background-color: white;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
     display: block;
-    margin-top: 20px;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border: 2px solid white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.login-link:hover {
-    background: white;
     color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.login-container:hover .login-box {
-    transform: scale(1.05);
+nav ul li a:hover {
+    background-color: #16A694;
 }
 
-/* dashborad */
-
-.topbar {
-    position: fixed;
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
-    width: 100%;
-    padding: 0 20px;
-    height: 60px;
-    display: grid;
-    grid-template-columns: 2fr 10fr 0.4fr 1fr;
-    align-items: center;
-    z-index: 1;
+nav ul li.dropdown {
+    display: inline-block;
 }
 
-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.logo h2 {
-    color: #299B63;
-}
-
-.search {
-    position: relative;
-    width: 60%;
-    justify-self: center;
-}
-
-.search input {
-    width: 100%;
-    min-width: 128px;
-    height: 40px;
-    padding: 0 40px;
-    font-size: 16px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    background: #f5f5f5;
-}
-
-.search i {
-    position: absolute;
-    right: 15px;
-    top: 15px;
+nav ul li.dropdown .dropbtn {
     cursor: pointer;
 }
 
-.fa-bell {
-    justify-self: right;
+nav ul li.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.user {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    justify-self: right;
-}
-
-
-/* sidebar */
-
-.sidebar {
-    position: fixed;
-    top: 60px;
-    width: 260px;
-    height: calc(100% - 60px);
-    background: #299B63;
-    overflow-x: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 2;
-}
-
-.sidebar ul {
-    margin-top: 20px;
-}
-
-.sidebar ul li {
-    width: 100%;
-    list-style: none;
-}
-
-.sidebar ul li:hover {
-    background: #fff;
-}
-
-.sidebar ul li:hover a {
-    color: #299B63;
-}
-
-.sidebar ul li a {
-    width: 100%;
+nav ul li.dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    color: #fff;
-    height: 60px;
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: left;
 }
 
-.sidebar ul li a i {
-    min-width: 60px;
+nav ul li.dropdown .dropdown-content a:hover {
+    background-color: #16A694;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+}
+
+
+/* Data Superstore */
+.data-superstore {
+    background-color: #22867A;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    width: auto;
+    height: 250px;
+    text-align: center; /* Menengahkan teks */
+    margin: auto; /* Membuat div terpusat */
+}
+
+.data-superstore h1 {
     font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px; /* Jarak bawah antara judul dan paragraf */
+    margin-top: 30px;
+}
+
+.data-superstore p {
+    font-size: 14px;
+    line-height: 1.5; /* Jarak antar baris yang lebih nyaman */
+}
+
+/* Data Scope */
+.data-scope {
+    background-color: white;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.data-scope h1 {
+    color: #16A694;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-
-/* main */
-
-.main {
-    position: absolute;
-    top: 60px;
-    width: calc(100% - 260px);
-    min-height: calc(100vh - 60px);
-    left: 260px;
-    background: #f5f5f5;
-}
-
-.cards {
-    width: 100%;
-    padding: 35px 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-}
-
-.cards .card {
-    padding: 20px;
+.icon-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    gap: 10px; /* Jarak antar item */
+    justify-content: center; /* Tengah pada baris */
 }
 
-.number {
-    font-size: 35px;
-    font-weight: 500;
-    color: #299B63;
+.ikon-item {
+    width: 18%; /* Menyesuaikan agar 5 ikon dalam satu baris */
+    text-align: center;
+    margin: 10px 0;
 }
 
-.card-name {
-    color: #888;
-    font-weight: 600;
+.ikon-item i {
+    font-size: 24px;
+    color: #22867A;
 }
 
-.icon-box i {
-    font-size: 45px;
-    color: #299b63;
+.ikon-item p {
+    margin-top: 5px;
+    color: #22867A;
 }
 
-
-/* charts */
-
-.charts {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 20px;
-    width: 100%;
+/* Superstore Maps */
+.superstore-maps {
     padding: 20px;
-    padding-top: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #22867A;
 }
 
-.chart {
+.superstore-maps h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#mapCanvas {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* CSS untuk div Meet Our Team */
+.tim-kami {
+    background-color: #22867A;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tim-kami h2 {
+    color: #000;
+}
+
+.foto-tim {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.anggota-tim {
+    margin: 10px;
+    text-align: center;
+    width: calc(33.33% - 20px); /* Untuk memastikan tiga foto per baris */
+}
+
+.anggota-tim img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.anggota-tim p {
+    margin-top: 10px;
+    color: #000;
+}
+
+/* CSS untuk div About Us */
+.tentang-kami {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tentang-kami h2 {
+    color: black;
+    margin-bottom: 30px;
+}
+
+.tentang-kami p {
+    color: black;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CSS untuk div Contact Us */
+.kontak-kami {
+    background-color: #22867A;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kontak-kami h1 {
+    color: #000;
+}
+
+.kotak-kontak {
+    background-color: #fff;
+    color: #22867A;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 4px solid black ;
+}
+
+.kotak-kontak h3, .kotak-kontak p {
+    margin: 10px 0;
+}
+
+
+/* region ya ges */
+/* central */
+.pusat {
+    background-color: #22867A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.segmen-kategori {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #22867A;
+}
+
+.kontainer-grafik {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    width: 100%;
+    width: 45%;
 }
 
-.chart h2 {
-    margin-bottom: 5px;
-    font-size: 20px;
-    color: #666;
-    text-align: center
-}
-
-@media (max-width:1115px) {
-    .sidebar {
-        width: 60px;
-    }
-    .main {
-        width: calc(100% - 60px);
-        left: 60px;
-    }
-}
-
-@media (max-width:880px) {
-    /* .topbar {
-        grid-template-columns: 1.6fr 6fr 0.4fr 1fr;
-    } */
-    .fa-bell {
-        justify-self: left;
-    }
-    .cards {
-        width: 100%;
-        padding: 35px 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-    }
-    .charts {
-        grid-template-columns: 1fr;
-    }
-    .doughnut-chart {
-        padding: 50px;
-    }
-    #doughnut {
-        padding: 50px;
-    }
-}
-
-@media (max-width:500px) {
-    .topbar {
-        grid-template-columns: 1fr 5fr 0.4fr 1fr;
-    }
-    .logo h2 {
-        font-size: 20px;
-    }
-    .search {
-        width: 80%;
-    }
-    .search input {
-        padding: 0 20px;
-    }
-    .fa-bell {
-        margin-right: 5px;
-    }
-    .cards {
-        grid-template-columns: 1fr;
-    }
-    .doughnut-chart {
-        padding: 10px;
-    }
-    #doughnut {
-        padding: 0px;
-    }
-    .user {
-        width: 40px;
-        height: 40px;
-    }
+.sub-kategori, .diskon {
+    background-color: #22867A;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }

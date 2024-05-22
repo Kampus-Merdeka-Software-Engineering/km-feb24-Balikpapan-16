@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projek 16</title>
+    <title>Dashboard Data Superstore</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h1>hi, welcome back</h1>
-            <a href="/dashborad.html" class="login-link">login</a>
+    <!-- Navbar -->
+    <nav class="navigasi">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Region</a>
+                <div class="dropdown-content">
+                    <a href="central.html">Central</a>
+                    <a href="east.html">East</a>
+                    <a href="west.html">West</a>
+                    <a href="south.html">South</a>
+                </div>
+            <li><a href="about.html">About</a></li>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Data Superstore -->
+    <div class="data-superstore">
+        <h1>DATA SUPERSTORE</h1>
+        <p>The Superstore dataset is a well-known dataset for data analysis and visualization, and it is frequently used to teach and demonstrate business intelligence solutions such as Tableau, Power BI, and other platforms. It covers information on sales, profits, clients, items, and shipping details for a fictitious retail office supply company. The dataset can be connected using keys like Order ID or Customer ID and is often delivered as an Excel or CSV file with numerous tables or sheets.</p>
+    </div>
+
+    <!-- Data Scope -->
+    <div class="data-scope">
+        <h1>Data Scope</h1>
+        <div class="icon-container">
+            <div class="ikon-item"><i class="fas fa-calendar-alt"></i><p>Order Date</p></div>
+            <div class="ikon-item"><i class="fas fa-user"></i><p>Customer ID</p></div>
+            <div class="ikon-item"><i class="fas fa-layer-group"></i><p>Segment</p></div>
+            <div class="ikon-item"><i class="fas fa-globe"></i><p>Country</p></div>
+            <div class="ikon-item"><i class="fas fa-map-marker-alt"></i><p>City</p></div>
+            <div class="ikon-item"><i class="fas fa-map"></i><p>State</p></div>
+            <div class="ikon-item"><i class="fas fa-home"></i><p>Region</p></div>
+            <div class="ikon-item"><i class="fas fa-box"></i><p>Product ID</p></div>
+            <div class="ikon-item"><i class="fas fa-tags"></i><p>Category</p></div>
+            <div class="ikon-item"><i class="fas fa-tag"></i><p>Sub-Category</p></div>
+            <div class="ikon-item"><i class="fas fa-shopping-cart"></i><p>Sales</p></div>
+            <div class="ikon-item"><i class="fas fa-cubes"></i><p>Quantity</p></div>
+            <div class="ikon-item"><i class="fas fa-percent"></i><p>Discount</p></div>
+            <div class="ikon-item"><i class="fas fa-chart-line"></i><p>Profit</p></div>
         </div>
     </div>
+
+    <!-- Superstore Maps -->
+    <div class="superstore-maps">
+        <h1>Superstore Maps</h1>
+        <canvas id="mapCanvas"></canvas>
+    </div>
+
+    <!-- Script untuk Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
