@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Region West</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navigasi">
         <ul>
@@ -25,6 +26,45 @@
         </ul>
     </nav>
 
-    <h1>hai</h1>
+
+    <!-- Div West -->
+    <div class="pusat">
+        <h1>West</h1>
+        <p>
+            Total Profit: $522.799.881<br>
+            Total Sales: $252.250.498<br>
+            Average Production per year: $93,681,471.14<br>
+            <li>The segment with the most profits is Consumer</li>
+            <li>The category with the most profits is Office Supplies</li>
+            <li >The sub-category with the most profits is Copiers followed by Binders</li>
+            <li >The office supplies and technology categories must be kept in stock</li>
+            <li >To increase sales of furniture, it is more adapted to the needs of people who work in offices, both in terms of design and providing more innovative and higher quality goods.</li>
+            <li >Big discounts do not guarantee big profits.</li>
+            <li >The city with the most profits in the western region is the City of Seattle, followed by the City of Los Angeles</li>
+        </p>
+    </div>
+
+    <!-- Div Segmen dan Kategori -->
+    <div class="segmen-kategori">
+        <div class="kontainer-grafik">
+            <canvas id="grafikSegmen"></canvas>
+        </div>
+        <div class="kontainer-grafik">
+            <canvas id="grafikKategori"></canvas>
+        </div>
+    </div>
+
+    <!-- Div Sub Kategori -->
+    <div class="sub-kategori">
+        <canvas id="grafikSubKategori"></canvas>
+    </div>
+
+    <!-- Div Diskon -->
+    <div class="diskon">
+        <canvas id="grafikDiskon"></canvas>
+    </div>
+
+    <!-- Script untuk Chart.js -->
+    <script src="scripts.js"></script>
 </body>
 </html>
