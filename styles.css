@@ -182,10 +182,22 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .anggota-tim img {
-    width: 150px;
-    height: 185px;
+    width: 15vw;
+    height: auto;
     border-radius: 15%;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .anggota-tim {
+        width: calc(50% - 20px); /* Dua gambar per baris di tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .anggota-tim {
+        width: calc(100% - 20px); /* Satu gambar per baris di mobile */
+    }
 }
 
 .anggota-tim p {

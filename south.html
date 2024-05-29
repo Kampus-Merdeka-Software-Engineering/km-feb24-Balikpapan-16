@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Region South</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navigasi">
         <ul>
@@ -25,6 +26,45 @@
         </ul>
     </nav>
 
-    <h1>hai</h1>
+
+    <!-- Div South -->
+    <div class="pusat">
+        <h1>South</h1>
+        <p>
+            Total Profit: $173,151,768<br>
+            Total Sales: $99,220,559<br>
+            Average Production per year: $93,681,471.14<br>
+            <li>The segment with the most profits is Consumer</li>
+            <li>The category with the most profits is Office Supplies</li>
+            <li >The sub-category with the most profits is Phones followed by Paper</li>
+            <li >Big discounts do not guarantee big profits</li>
+            <li >The city with the most profits in the South region is Henderson City, followed by Springfield City</li>
+            <li >the company should consider expanding its offerings in the profitable Office Supplies and Telephone categories, and potentially in Paper as well.</li>
+            <li >Companies can implement effective sales strategies, such as product promotions, fast delivery, and good service. This can help companies to better direct sales to consumers and reduce the likelihood of product returns.</li>
+        </p>
+    </div>
+
+    <!-- Div Segmen dan Kategori -->
+    <div class="segmen-kategori">
+        <div class="kontainer-grafik">
+            <canvas id="grafikSegmen"></canvas>
+        </div>
+        <div class="kontainer-grafik">
+            <canvas id="grafikKategori"></canvas>
+        </div>
+    </div>
+
+    <!-- Div Sub Kategori -->
+    <div class="sub-kategori">
+        <canvas id="grafikSubKategori"></canvas>
+    </div>
+
+    <!-- Div Diskon -->
+    <div class="diskon">
+        <canvas id="grafikDiskon"></canvas>
+    </div>
+
+    <!-- Script untuk Chart.js -->
+    <script src="scripts.js"></script>
 </body>
 </html>

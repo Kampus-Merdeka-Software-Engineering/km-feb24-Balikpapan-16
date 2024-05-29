@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Region East</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navigasi">
         <ul>
@@ -25,6 +26,45 @@
         </ul>
     </nav>
 
-    <h1>hai</h1>
+
+    <!-- Div East -->
+    <div class="pusat">
+        <h1>East</h1>
+        <p>
+            Average Sales per year: $115,976,655.5<br>
+            Average profit per year: $22,295,184.36<br>
+            Average Production per year: $93,681,471.14<br>
+            The product category with the highest profit is Technology.<br>
+            The most common type of transaction is Office Supplies.<br>
+            <li >Sales Management Team: Prioritize 0% and 0.2% discounts. Evaluate the effectiveness of 0.1% discounts and avoid 0.3%-0.7% discounts.</li>
+            <li >Marketing Team: Design campaigns focusing on 0% and 0.2% discounts.</li>
+            <li >Finance Team: Monitor the use of discounts, especially 0.3%-0.7%, and consider restructuring discount strategies. Analyze production costs and appropriate selling prices, especially in the furniture category.</li>
+            <li >Product Management Team: Ensure the availability of Technology and Office Supplies products is maintained and not excessive.</li>
+            <li >Customer Satisfaction Team: Analyze discounts, product availability, and customer experience.</li>
+        </p>
+    </div>
+
+    <!-- Div Segmen dan Kategori -->
+    <div class="segmen-kategori">
+        <div class="kontainer-grafik">
+            <canvas id="grafikSegmen"></canvas>
+        </div>
+        <div class="kontainer-grafik">
+            <canvas id="grafikKategori"></canvas>
+        </div>
+    </div>
+
+    <!-- Div Sub Kategori -->
+    <div class="sub-kategori">
+        <canvas id="grafikSubKategori"></canvas>
+    </div>
+
+    <!-- Div Diskon -->
+    <div class="diskon">
+        <canvas id="grafikDiskon"></canvas>
+    </div>
+
+    <!-- Script untuk Chart.js -->
+    <script src="scripts.js"></script>
 </body>
 </html>
