@@ -240,14 +240,41 @@ nav ul li.dropdown:hover .dropdown-content {
 
 /* region ya ges */
 /* central */
+
 .pusat {
     background-color: #22867A;
     color: white;
     text-align: center;
     padding: 20px;
+    font-family: 'poppins' , sans-serif;
 }
 
-.segmen-kategori {
+.pusat h1 {
+    padding-bottom: 20px;
+}
+
+.segment-grafik {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.segment-grafik h1 {
+    margin-bottom: 20px;
+}
+
+.category-grafik {
+    margin: 50px auto;
+    text-align: center;
+    background-color: #fff;
+}
+
+.category-grafik h1 {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* .segmen-kategori {
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -259,10 +286,10 @@ nav ul li.dropdown:hover .dropdown-content {
     padding: 20px;
     border-radius: 10px;
     width: 45%;
-}
+} */
 
 .sub-kategori, .diskon {
-    background-color: #22867A;
+    background-color: #fff;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
