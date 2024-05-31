@@ -1,11 +1,70 @@
-/* css halaman login */
-
-/* CSS halaman index */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* css halaman login */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Menggunakan font sans-serif */
+}
+
+/* Mengatur latar belakang */
+.latar-belakang {
+    background-image: url('login.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mengatur konten utama */
+.konten-utama {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    position: relative;
+    bottom: -50px; /* Memposisikan lebih ke bawah */
+}
+
+.konten-utama h1 {
+    color: white;
+    font-size: 2.5em; /* Menyesuaikan ukuran font */
+    margin: 0;
+    letter-spacing: 2px; /* Memberikan jarak antar huruf */
+}
+
+.konten-utama h2 {
+    color: white;
+    font-size: 2em; /* Menyesuaikan ukuran font */
+    margin: 10px 0;
+    letter-spacing: 2px; /* Memberikan jarak antar huruf */
+}
+
+/* Gaya untuk tombol present yang berbentuk tautan */
+.tombol-present {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px; /* Menyesuaikan padding */
+    font-size: 28px; /* Menyesuaikan ukuran font */
+    color: white;
+    text-decoration: none;
+    width: 400px;
+    border: 2px solid #5D9CAF; /* Garis tepi berwarna biru */
+    border-radius: 5px;
+    background-color: transparent; /* Tengah transparan */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi halus */
+}
+
+/* CSS halaman index */
 
 /* Navbar */
 body {
