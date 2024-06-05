@@ -6,6 +6,7 @@
     <title>Region East</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="east.js" defer></script>
 </head>
 <body>
 
@@ -44,27 +45,26 @@
         </p>
     </div>
 
-    <!-- Div Segmen dan Kategori -->
-    <div class="segmen-kategori">
-        <div class="kontainer-grafik">
-            <canvas id="grafikSegmen"></canvas>
-        </div>
-        <div class="kontainer-grafik">
-            <canvas id="grafikKategori"></canvas>
-        </div>
-    </div>
+</div>
 
-    <!-- Div Sub Kategori -->
-    <div class="sub-kategori">
-        <canvas id="grafikSubKategori"></canvas>
-    </div>
+<!-- Grafik Segment untuk Region East -->
+<div class="segment-grafik-east">
+    <h1>Profit Segment untuk Region East</h1>
+    <canvas id="eastSegmentChart"></canvas>
+</div>
 
-    <!-- Div Diskon -->
-    <div class="diskon">
-        <canvas id="grafikDiskon"></canvas>
-    </div>
+<!-- Grafik Kategori untuk Region East -->
+<div class="kategori-grafik-east">
+    <h1>Profit Kategori untuk Region East</h1>
+    <canvas id="eastCategoryChart"></canvas>
+</div>
 
-    <!-- Script untuk Chart.js -->
-    <script src="scripts.js"></script>
+<!-- Grafik Diskon untuk Region East -->
+<div class="diskon-grafik-east">
+    <h1>Profit Diskon untuk Region East</h1>
+    <canvas id="eastDiscountChart"></canvas>
+</div>
+
+
 </body>
 </html>

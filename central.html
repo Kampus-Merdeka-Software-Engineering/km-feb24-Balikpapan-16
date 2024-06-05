@@ -6,6 +6,7 @@
     <title>Region Central</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="central.js" defer></script>
 </head>
 <body>
 
@@ -41,27 +42,29 @@
         </p>
     </div>
 
-    <!-- segment -->
-    <div class="segment-grafik">
-        <h1>Profit Segmen Superstore</h1>
-        <canvas id="segmentChart"></canvas>
+     <!-- Grafik Segment untuk Region Central -->
+     <div class="segment-grafik-central">
+        <h1>Profit Segment untuk Region Central</h1>
+        <canvas id="centralSegmentChart" width="300" height="200"></canvas>
     </div>
 
-    <!-- category -->
-    <div class="category-grafik">
-        <h1>Profit Category Superstore</h1>
-        <canvas id="categoryChart"></canvas>
+    <!-- Grafik Kategori untuk Region Central -->
+    <div class="kategori-grafik-central">
+        <h1>Profit Kategori untuk Region Central</h1>
+        <canvas id="centralCategoryChart" width="300" height="200"></canvas>
     </div>
 
-    <!-- sub-kategori -->
-    <div class="sub-kategori">
-        <h1>Profit dan Diskon Line Chart</h1>
-        <canvas id="lineChart"></canvas>
+    <!-- Grafik Diskon untuk Region Central -->
+    <div class="diskon-grafik-central">
+        <h1>Profit Diskon untuk Region Central</h1>
+        <canvas id="centralDiscountChart" width="300" height="200"></canvas>
     </div>
 
-    <script src="segment-central.js"></script>
-    <script src="category-central.js"></script>
-    <script src="diskon-central.js"></script>
+    <!-- Grafik Sub-Kategori untuk Region Central -->
+    <div class="subkategori-grafik-central">
+        <h1>Profit Sub-Kategori untuk Region Central</h1>
+        <canvas id="centralSubCategoryChart" width="300" height="200"></canvas>
+    </div>
+
 </body>
 </html>
-

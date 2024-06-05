@@ -367,3 +367,9 @@ nav ul li.dropdown:hover .dropdown-content {
     padding: 20px;
     border-radius: 10px;
 }
+
+/* .chartCanvas {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+} */
