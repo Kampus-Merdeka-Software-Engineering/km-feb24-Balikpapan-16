@@ -14,7 +14,7 @@ body, html {
 
 /* Mengatur latar belakang */
 .latar-belakang {
-    background-image: url('login.jpg');
+    background-image: url('/km-feb24-Balikpapan-16/FOTO/login.jpg');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -347,20 +347,6 @@ nav ul li.dropdown:hover .dropdown-content {
     margin-bottom: 20px;
 }
 
-/* .segmen-kategori {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #22867A;
-}
-
-.kontainer-grafik {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
-} */
-
 .sub-kategori, .diskon {
     background-color: #fff;
     margin: 20px;
@@ -368,8 +354,31 @@ nav ul li.dropdown:hover .dropdown-content {
     border-radius: 10px;
 }
 
-/* .chartCanvas {
-    max-width: 600px;
-    margin: 0 auto;
+.chart-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
     display: block;
-} */
+    max-width: 100%;
+    height: 400px; /* Adjusted height */
+}
+
+.data-superstore, .data-scope, .profit-superstore {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.chartt-container {
+    position: relative;
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+}

@@ -1,44 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
-  });
-  
-  // Fungsi untuk memuat data dari file data.json
-  async function fetchData() {
+// Fungsi untuk memuat data dari file data.json
+async function fetchData() {
     try {
         const response = await fetch('data.json');
         const data = await response.json();
-        processCentralData(data);
+        processWestData(data);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
-  }
-  
-  // Fungsi untuk memproses data untuk region Central
-  function processCentralData(data) {
-    const centralData = data.filter(item => item.Region === 'Central');
-  
-    renderSegmentChart(centralData);
-    renderCategoryChart(centralData);
-    renderDiscountChart(centralData);
-    renderSubCategoryChart(centralData);  // Tambahkan fungsi untuk sub-kategori
-  }
-  
-  // Fungsi untuk membuat grafik segment
-  function renderSegmentChart(data) {
+}
+
+// Fungsi untuk memproses data untuk region West
+function processWestData(data) {
+    const westData = data.filter(item => item.Region === 'West');
+
+    renderSegmentChart(westData);
+    renderCategoryChart(westData);
+    renderDiscountChart(westData);
+    renderSubCategoryChart(westData);  // Tambahkan fungsi untuk sub-kategori
+}
+
+// Fungsi untuk membuat grafik segment
+function renderSegmentChart(data) {
     const segmentProfit = {};
     data.forEach(item => {
+        let profit = parseFloat(item.Profit?.toString().replace(',', '.') || 0);
         if (segmentProfit[item.Segment]) {
-            let char = ',' ? ',' : '';
-            segmentProfit[item.Segment] += parseFloat(item.Profit.replace(char, '.'));
+            segmentProfit[item.Segment] += profit;
         } else {
-            segmentProfit[item.Segment] = parseFloat(item.Profit.replace(',', '.'));
+            segmentProfit[item.Segment] = profit;
         }
     });
-  
+
     const segments = Object.keys(segmentProfit);
     const profits = Object.values(segmentProfit);
-  
-    const ctx = document.getElementById('centralSegmentChart').getContext('2d');
+
+    const ctx = document.getElementById('westSegmentChart').getContext('2d');
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -53,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Set to false to adjust height
             scales: {
                 y: {
                     beginAtZero: true,
@@ -92,23 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-  }
-  
-  // Fungsi untuk membuat grafik kategori
-  function renderCategoryChart(data) {
+}
+
+// Fungsi untuk membuat grafik kategori
+function renderCategoryChart(data) {
     const categoryProfit = {};
     data.forEach(item => {
+        let profit = parseFloat(item.Profit?.toString().replace(',', '.') || 0);
         if (categoryProfit[item.Category]) {
-            categoryProfit[item.Category] += parseFloat(item.Profit.replace(',', '.'));
+            categoryProfit[item.Category] += profit;
         } else {
-            categoryProfit[item.Category] = parseFloat(item.Profit.replace(',', '.'));
+            categoryProfit[item.Category] = profit;
         }
     });
-  
+
     const categories = Object.keys(categoryProfit);
     const profits = Object.values(categoryProfit);
-  
-    const ctx = document.getElementById('centralCategoryChart').getContext('2d');
+
+    const ctx = document.getElementById('westCategoryChart').getContext('2d');
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -123,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Set to false to adjust height
             scales: {
                 y: {
                     beginAtZero: true,
@@ -162,24 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-  }
-  
-  // Fungsi untuk membuat grafik diskon
-  function renderDiscountChart(data) {
+}
+
+// Fungsi untuk membuat grafik diskon
+function renderDiscountChart(data) {
     const discountProfit = {};
     data.forEach(item => {
-        const discount = parseFloat(item.Discount.toString().replace(',', '.')) || 0;
+        const discount = parseFloat(item.Discount?.toString().replace(',', '.') || 0);
+        let profit = parseFloat(item.Profit?.toString().replace(',', '.') || 0);
         if (discountProfit[discount]) {
-            discountProfit[discount] += parseFloat(item.Profit.replace(',', '.'));
+            discountProfit[discount] += profit;
         } else {
-            discountProfit[discount] = parseFloat(item.Profit.replace(',', '.'));
+            discountProfit[discount] = profit;
         }
     });
-  
+
     const discounts = Object.keys(discountProfit);
     const profits = Object.values(discountProfit);
-  
-    const ctx = document.getElementById('centralDiscountChart').getContext('2d');
+
+    const ctx = document.getElementById('westDiscountChart').getContext('2d');
     new Chart(ctx, {
         type: 'pie',
         data: {
@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Set to false to adjust height
             plugins: {
                 legend: {
                     position: 'top'
@@ -232,23 +233,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-  }
-  
-  // Fungsi untuk membuat grafik sub-kategori
-  function renderSubCategoryChart(data) {
+}
+
+// Fungsi untuk membuat grafik sub-kategori
+function renderSubCategoryChart(data) {
     const subCategoryProfit = {};
     data.forEach(item => {
+        let profit = parseFloat(item.Profit?.toString().replace(',', '.') || 0);
         if (subCategoryProfit[item['Sub-Category']]) {
-            subCategoryProfit[item['Sub-Category']] += parseFloat(item.Profit.replace(',', '.'));
+            subCategoryProfit[item['Sub-Category']] += profit;
         } else {
-            subCategoryProfit[item['Sub-Category']] = parseFloat(item.Profit.replace(',', '.'));
+            subCategoryProfit[item['Sub-Category']] = profit;
         }
     });
-  
+
     const subCategories = Object.keys(subCategoryProfit);
     const profits = Object.values(subCategoryProfit);
-  
-    const ctx = document.getElementById('centralSubCategoryChart').getContext('2d');
+
+    const ctx = document.getElementById('westSubCategoryChart').getContext('2d');
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -263,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Set to false to adjust height
             scales: {
                 y: {
                     beginAtZero: true,
@@ -302,5 +305,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-  }
-  
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData();
+});

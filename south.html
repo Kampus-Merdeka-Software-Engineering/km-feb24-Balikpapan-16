@@ -6,6 +6,7 @@
     <title>Region South</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/km-feb24-Balikpapan-16/js/south.js" defer></script>
 </head>
 <body>
 
@@ -44,27 +45,41 @@
         </p>
     </div>
 
-    <!-- Div Segmen dan Kategori -->
-    <div class="segmen-kategori">
-        <div class="kontainer-grafik">
-            <canvas id="grafikSegmen"></canvas>
-        </div>
-        <div class="kontainer-grafik">
-            <canvas id="grafikKategori"></canvas>
-        </div>
+    <!-- Grafik Segment untuk Region East -->
+    <div class="segment-grafik">
+        <h1>Profit Segment untuk Region East</h1>
+        <div class="chart-container">
+        <canvas id="southSegmentChart"></canvas>
     </div>
 
-    <!-- Div Sub Kategori -->
-    <div class="sub-kategori">
-        <canvas id="grafikSubKategori"></canvas>
     </div>
 
-    <!-- Div Diskon -->
-    <div class="diskon">
-        <canvas id="grafikDiskon"></canvas>
+<!-- Grafik Kategori untuk Region East -->
+    <div class="kategori-grafik">
+        <h1>Profit Kategori untuk Region East</h1>
+        <div class="chart-container">
+        <canvas id="southCategoryChart"></canvas>
     </div>
 
-    <!-- Script untuk Chart.js -->
-    <script src="scripts.js"></script>
+    </div>
+
+<!-- Grafik Diskon untuk Region East -->
+    <div class="diskon-grafik">
+        <h1>Profit Diskon untuk Region East</h1>
+        <div class="chart-container">
+        <canvas id="southDiscountChart"></canvas>
+    </div>
+
+    </div>
+
+<!-- Grafik Sub-Kategori untuk Region East -->
+    <div class="subkategori-grafik">
+        <h1>Profit Sub-Kategori untuk Region East</h1>
+        <div class="chart-container">
+        <canvas id="southSubCategoryChart"></canvas>
+    </div>
+
+    </div>
+    
 </body>
 </html>
