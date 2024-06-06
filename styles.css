@@ -145,7 +145,7 @@ nav ul li.dropdown:hover .dropdown-content {
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     color: white;
-    width: auto;
+    width: 100%;
     height: 250px;
     text-align: center; /* Menengahkan teks */
     margin: auto; /* Membuat div terpusat */
@@ -381,4 +381,45 @@ canvas {
     height: 400px;
     width: 80%;
     margin: 0 auto;
+}
+
+/* .kategori-grafik-a{
+    background-color: blue;
+} */
+
+
+
+/* Mengatur gaya untuk div konten utama */
+#resigh {
+    background-color: #00897B;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mengatur gaya untuk div judul */
+#judul h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Mengatur gaya untuk div rekomendasi */
+#rekomendasi {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rekomendasi p {
+    margin: 10px 0;
+    font-size: 1em;
+    width: 600px;
+    text-align: center;
 }
