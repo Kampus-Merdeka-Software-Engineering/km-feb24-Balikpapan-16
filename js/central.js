@@ -1,7 +1,7 @@
 // Fungsi untuk memuat data dari file data.json
 async function fetchData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('/km-feb24-Balikpapan-16/data.json');
         const data = await response.json();
         processCentralData(data);
     } catch (error) {
